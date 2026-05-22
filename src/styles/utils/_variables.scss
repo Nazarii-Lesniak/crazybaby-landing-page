@@ -1,0 +1,36 @@
+// fonts
+$font-inter: Inter, sans-serif;
+
+// breakpoints
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1194px;
+
+// teal colors
+$clr-teal-500: #0DB2B3;
+$clr-teal-200: #CFEFF0;
+$clr-teal-50: #EEFAFA;
+
+// grayscale colors
+$clr-gray-900: #131313;
+$clr-gray-800: #333;
+$clr-gray-700: #4F4F4F;
+$clr-gray-500: #7C7C7C;
+$clr-gray-400: #BDBDBD;
+$clr-gray-300: #D0D0D0;
+$clr-gray-100: #F7F7F7;
+
+// semantic colors
+$clr-primary: $clr-teal-500;
+$clr-primary-hover: $clr-teal-200;
+$clr-primary-bg: $clr-teal-50;
+$clr-text-title: $clr-gray-900;
+$clr-text-main: $clr-gray-800;
+$clr-text-muted: $clr-gray-700;
+
+// border colors
+$clr-border: $clr-gray-500;
+$clr-border-light: $clr-gray-400;
+$clr-divider: $clr-gray-300;
+
+// background colors
+$clr-bg-main: $clr-gray-100;

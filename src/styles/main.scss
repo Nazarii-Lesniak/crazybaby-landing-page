@@ -1,3 +1,6 @@
+@use './utils/variables';
+@use './utils/mixins';
+
 body {
   margin: 0;
 }
