@@ -1,0 +1,6 @@
+@use './variables' as *;
+
+html {
+  background-color: $clr-bg-main;
+  font-family: $font-inter;
+}

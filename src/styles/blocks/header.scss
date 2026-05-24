@@ -1,0 +1,126 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+@use "../utils/typography";
+
+.header {
+  height: 76px;
+
+  &__container {
+    align-items: center;
+    height: 100%;
+
+    @include mixins.container;
+    @include mixins.grid;
+  }
+
+  &__link {
+    grid-column: 1 / span 2;
+  }
+
+  &__wrapper {
+    display: none;
+
+    @include mixins.to-tablet {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      grid-column: 5 / span 3;
+      justify-self: end;
+    }
+
+    @include mixins.to-desktop {
+      grid-column: 9 / -1;
+      gap: 47px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    &-item {
+      display: flex;
+      align-items: center;
+    }
+
+    &-link {
+      text-transform: uppercase;
+      color: $clr-text-muted;
+
+      font-weight: 300;
+
+      &:hover {
+        color: $clr-primary;
+      }
+    }
+  }
+
+  &__language-switch {
+    color: $clr-gray-400;
+    font-weight: 300;
+
+    font-size: 14px;
+    line-height: 18px;
+
+
+    &[aria-current="page"] {
+      color: $clr-text-main;
+      font-weight: 400;
+    }
+
+    @include mixins.to-desktop {
+      line-height: 20px;
+    }
+  }
+
+  &__language-divider {
+    color: $clr-text-muted;
+    margin: 0 3px;
+  }
+
+  &__buy-button {
+    background-color: $clr-bg-button;
+    color: $clr-white;
+    text-transform: uppercase;
+
+    width: 100px;
+
+    cursor: pointer;
+
+    @include mixins.to-tablet {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 100px;
+      height: 48px;
+    }
+
+    @include mixins.to-desktop {
+      width: 102px;
+    }
+
+    &:hover {
+      background-color: $clr-bg-button-hover;
+    }
+
+    &:disabled {
+      background-color: $clr-bg-button-disabled;
+      cursor: not-allowed;
+    }
+  }
+
+  &__menu-button {
+    grid-column: 4;
+    justify-self: end;
+
+    @include mixins.to-tablet {
+      grid-column: 8;
+    }
+
+    @include mixins.to-desktop {
+      display: none;
+    }
+  }
+}
