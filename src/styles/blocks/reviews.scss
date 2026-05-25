@@ -1,0 +1,81 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+@use "../utils/typography";
+
+.reviews {
+  &__container {
+    padding-top: 110px;
+    
+    @include mixins.container;
+    @include mixins.grid;
+    
+    @include mixins.to-tablet {
+      padding-top: 110px;
+    }
+
+    @include mixins.to-desktop {
+      padding-top: 170px;
+    }
+  }
+
+  &__card {
+    grid-column: 1 / -1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+
+    @include mixins.to-tablet {
+      grid-column: 2 / -2;
+      gap: 40px;
+    }
+
+    @include mixins.to-desktop {
+      grid-column: 3 / span 8;
+      gap: 30px;
+    }
+  }
+
+  &__quote {
+    color: $clr-text-title;
+
+    @include typography.text-quote;
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    @include mixins.to-tablet {
+      gap: 20px;
+    }
+  }
+
+  &__avatar {
+    width: 62px;
+    height: 62px;
+  }
+
+  &__author-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__author-name {
+    color: $clr-text-title;
+
+    @include typography.text-h5;
+  }
+
+  &__author-role {
+    color: $clr-text-muted;
+
+    @include typography.text-secondary;
+  }
+}
