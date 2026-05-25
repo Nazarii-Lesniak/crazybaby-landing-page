@@ -1,0 +1,136 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+@use "../utils/typography";
+
+.benefits {
+  &__container {
+    @include mixins.container;
+
+    padding-top: 110px;
+
+    @include mixins.to-tablet {
+      padding-top: 140px;
+    }
+
+    @include mixins.to-desktop {
+      padding-top: 170px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    gap: 30px;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+
+    @include mixins.to-tablet {
+      grid-auto-flow: unset;
+      grid-auto-columns: unset;
+
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+      gap: 20px;
+      row-gap: 65px;
+    }
+
+    @include mixins.to-desktop {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 30px;
+    }
+  }
+
+  &__card {
+    scroll-snap-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    gap: 20px;
+
+    @include mixins.to-tablet {
+      scroll-snap-align: unset;
+      grid-column: span 4;
+    }
+
+    @include mixins.to-desktop {
+      grid-column: span 3;
+    }
+  }
+
+  &__icon {
+    width: 70px;
+    height: 50px;
+  }
+
+  &__title {
+    padding-top: 10px;
+    color: $clr-text-title;
+
+    @include typography.text-h4;
+
+    @include mixins.to-tablet {
+      padding-top: 40px;
+    }
+
+    @include mixins.to-desktop {
+      display: flex;
+      justify-content: center;
+
+      padding-top: 30px;
+      height: 56px;
+    }
+  }
+
+  &__description {
+    @include typography.text-secondary;
+
+    color: $clr-text-muted;
+    padding-top: 20px;
+
+    @include mixins.to-tablet {
+      padding-top: 21px;
+    }
+
+    @include mixins.to-desktop {
+      padding-top: 24px;
+    }
+  }
+
+  &__banner {
+    position: relative;
+    overflow: hidden;
+
+    padding-top: 110px;
+
+    @include mixins.container;
+    @include mixins.grid;
+
+    @include mixins.to-tablet {
+      padding-top: 140px;
+    }
+
+    @include mixins.to-desktop {
+      padding-top: 170px;
+    }
+  }
+
+  &__banner-picture {
+    grid-column: 1 / -1;
+
+    @include mixins.to-desktop {
+      grid-column: 2 / span 10;
+    }
+  }
+
+  &__banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
