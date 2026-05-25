@@ -1,0 +1,26 @@
+@use "../utils/variables" as *;
+
+.icon {
+  background: none;
+  border: none;
+
+  cursor: pointer;
+
+  &--menu {
+    background-image: url("/src/images/icons/icon-menu.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 32px;
+    height: 32px;
+  }
+
+  &--close {
+    background-image: url("/src/images/icons/icon-menu-close.svg"); // Шлях до вашої іконки крестика
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 32px;
+    height: 32px;
+  }
+}

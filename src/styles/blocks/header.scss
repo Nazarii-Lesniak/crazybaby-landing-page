@@ -1,0 +1,112 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+@use "../utils/typography";
+
+.header {
+  height: 76px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    @include mixins.container;
+    @include mixins.grid;
+  }
+
+  &__logo-link {
+    min-width: 161px;
+    grid-column: 1 / span 2;
+  }
+
+  &__wrapper {
+    display: none;
+
+    @include mixins.to-tablet {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      grid-column: 5 / span 3;
+      justify-self: end;
+    }
+
+    @include mixins.to-desktop {
+      grid-column: 9 / -1;
+      gap: 47px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__specs-link {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: $clr-text-muted;
+    text-decoration: none;
+
+    &:hover {
+      color: $clr-primary;
+    }
+  }
+
+  &__languages {
+    @include mixins.language-switcher;
+  }
+
+  &__buy-button {
+    background-color: $clr-bg-button;
+    color: $clr-white;
+    text-transform: uppercase;
+
+    width: 100px;
+
+    cursor: pointer;
+
+    @include mixins.to-tablet {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 100px;
+      height: 48px;
+    }
+
+    @include mixins.to-desktop {
+      width: 102px;
+    }
+
+    &:hover {
+      background-color: $clr-bg-button-hover;
+    }
+
+    &:disabled {
+      background-color: $clr-bg-button-disabled;
+      cursor: not-allowed;
+    }
+  }
+
+  &__menu-button {
+    grid-column: 4;
+    justify-self: end;
+
+    @include mixins.to-tablet {
+      grid-column: 8;
+    }
+
+    @include mixins.to-desktop {
+      display: none;
+    }
+  }
+}

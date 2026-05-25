@@ -1,13 +1,385 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miami</title>
-    <link rel="stylesheet" href="./styles/main.scss">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crazybaby – Futuristic Wireless Speaker Luna</title>
+    <meta
+      name="description"
+      content="Luna by Crazybaby – a futuristic wireless speaker with balanced sound, intuitive lighting system, and multi-room Wi-Fi support."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      sizes="180x180"
+      href="./images/favicon/favicon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./styles/main.scss" />
     <script src="scripts/main.js" defer></script>
   </head>
+
   <body>
-    <h1>Landing Page</h1>
+    <header class="header">
+      <div class="header__container">
+        <a href="#" class="header__logo-link">
+          <img
+            src="./images/logo.svg"
+            alt="Crazybaby logo"
+            class="header__logo"
+          />
+        </a>
+
+        <div class="header__wrapper">
+          <nav class="header__navigation">
+            <ul class="header__list">
+              <li class="header__item">
+                <a href="#specs" class="header__specs-link"> Specs </a>
+              </li>
+
+              <li class="header__item">
+                <div class="header__languages">
+                  <a href="#en" class="language-switch">EN </a>
+                  <span class="language-divider">/</span>
+                  <a href="#ua" class="language-switch">UA</a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+
+          <button type="button" class="header__buy-button">Buy</button>
+        </div>
+
+        <a href="#menu" class="header__menu-button icon icon--menu"></a>
+      </div>
+    </header>
+
+    <aside class="menu" id="menu">
+      <div class="menu__header">
+        <a href="#" class="menu__logo-link">
+          <img
+            src="./images/logo.svg"
+            alt="Crazybaby logo"
+            class="menu__logo"
+          />
+        </a>
+
+        <a
+          href="#"
+          class="menu__close-button icon icon--close"
+          aria-label="Close navigation menu"
+        ></a>
+      </div>
+
+      <nav class="menu__nav" aria-label="Mobile menu links">
+        <ul class="menu__nav-list">
+          <li class="menu__nav-item">
+            <a class="menu__nav-link menu__nav-link--active" href="#our-story">
+              Our Story
+            </a>
+          </li>
+          <li class="menu__nav-item">
+            <a class="menu__nav-link" href="#about-us">About Us</a>
+          </li>
+          <li class="menu__nav-item">
+            <a class="menu__nav-link" href="#features">Features</a>
+          </li>
+          <li class="menu__nav-item">
+            <a class="menu__nav-link" href="#get-in-touch">Get in Touch</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="menu__bottom">
+        <a href="#specs" class="menu__specs-link">Specs</a>
+
+        <div class="menu__languages language-switcher">
+          <a href="#en" class="language-switch"> EN </a>
+          <span class="language-divider">/</span>
+          <a href="#ua" class="language-switch">UA</a>
+        </div>
+      </div>
+
+      <a href="#get-in-touch" class="menu__buy-button">Buy</a>
+    </aside>
+
+    <main>
+      <section class="promo" id="our-story">
+        <div class="promo__container">
+          <div class="promo__image-wrapper">
+            <picture>
+              <source
+                media="(min-width: 1194px)"
+                srcset="./images/product/luna-product-pair-lg.webp"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 1194px)"
+                srcset="./images/product/luna-product-pair-lg.png"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/product/luna-product-pair-md.webp"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/product/luna-product-pair-md.png"
+              />
+              <source
+                srcset="./images/product/luna-product-pair-sm.webp"
+                type="image/webp"
+              />
+              <img
+                src="./images/product/luna-product-pair-sm.png"
+                alt="Luna wireless speaker"
+                class="promo__image"
+              />
+            </picture>
+          </div>
+          <div class="promo__content">
+            <h1 class="promo__title">Futuristic Wireless Speaker</h1>
+            <p class="promo__description">
+              Luna’s performance is balanced and smooth in all frequency ranges
+              which makes the music both naturally pleasant and distinctly more
+              layered.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits" id="specs">
+        <div class="benefits__container">
+          <ul class="benefits__list">
+            <li class="benefits__card">
+              <img
+                src="./images/icons/icon-design.svg"
+                alt="Icon of futuristic design"
+                class="benefits__icon"
+              />
+              <h3 class="benefits__title">Futuristic Design</h3>
+              <p class="benefits__description">
+                To give Luna a truly flawless look, we specifically picked
+                aircraft grade aluminum as its material and adopted both
+                three-dimensional stretch-bending technology and a high
+                precision cold forging technique.
+              </p>
+            </li>
+
+            <li class="benefits__card">
+              <img
+                src="./images/icons/icon-volume.svg"
+                alt="Icon of volume"
+                class="benefits__icon"
+              />
+              <h3 class="benefits__title">Tweeter Speaker System</h3>
+              <p class="benefits__description">
+                To deliver a more layered sound performance better than a sole
+                full-range speaker, our team equipped Luna with one more tweeter
+                speaker responsible for high-frequency sound independently.
+              </p>
+            </li>
+
+            <li class="benefits__card">
+              <img
+                src="./images/icons/icon-wifi.svg"
+                alt="Icon of wifi"
+                class="benefits__icon"
+              />
+              <h3 class="benefits__title">Multiroom System</h3>
+              <p class="benefits__description">
+                Luna is natively compatible with your home Wi-Fi. Set up
+                multiple speakers in different rooms to expand your music
+                experience into the entire house.
+              </p>
+            </li>
+
+            <li class="benefits__card">
+              <img
+                src="./images/icons/icon-sun.svg"
+                alt="Icon of sun"
+                class="benefits__icon"
+              />
+              <h3 class="benefits__title">Intuitive Lighting System</h3>
+              <p class="benefits__description">
+                An intuitive user interface allows you to adjust the hue and
+                saturation of color for lighting that fits any mood and
+                situation.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="benefits__banner">
+          <picture class="benefits__banner-picture">
+            <source
+              media="(min-width: 1194px)"
+              srcset="./images/product/luna-promo-banner-lg.webp"
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 1194px)"
+              srcset="./images/product/luna-promo-banner-lg.png"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="./images/product/luna-promo-banner-md.webp"
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="./images/product/luna-promo-banner-md.png"
+            />
+            <source
+              srcset="./images/product/luna-promo-banner-sm.webp"
+              type="image/webp"
+            />
+            <img
+              src="./images/product/luna-product-pair-sm.png"
+              alt="Luna speaker collection"
+              class="benefits__banner-image"
+            />
+          </picture>
+        </div>
+      </section>
+
+      <section class="about" id="about-us">
+        <div class="about__container">
+          <h2 class="about__title">DESIGNED FOR THE FUTURE</h2>
+
+          <div class="about__image-wrapper">
+            <picture>
+              <source
+                media="(min-width: 1194px)"
+                srcset="./images/product/luna-concept-art-lg.webp"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 1194px)"
+                srcset="./images/product/luna-concept-art-lg.png"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/product/luna-concept-art-md.webp"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/product/luna-concept-art-md.png"
+              />
+              <source
+                srcset="./images/product/luna-concept-art-sm.webp"
+                type="image/webp"
+              />
+              <img
+                src="./images/product/luna-concept-art-sm.png"
+                alt="Luna concept art"
+                class="about__image"
+              />
+            </picture>
+          </div>
+
+          <p class="about__description">
+            In 2014, a group of geeky industrial designers, engineering veterans
+            and acoustic experts formed crazybaby. This is a bunch of passionate
+            people who are crazy enough to think they can challenge the industry
+            with disruptive audio products.
+          </p>
+
+          <a href="#about-us" class="about__link">See more about us</a>
+        </div>
+      </section>
+
+      <section class="luna-eye" id="luna-eye">
+        <div class="luna-eye__container">
+          <h2 class="luna-eye__title">Luna Eye</h2>
+
+          <div class="luna-eye__image-wrapper">
+            <picture>
+              <source
+                media="(min-width: 1194px)"
+                srcset="./images/product/luna-nature-concept-lg.webp"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 1194px)"
+                srcset="./images/product/luna-nature-concept-lg.png"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/product/luna-nature-concept-md.webp"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/product/luna-nature-concept-md.png"
+              />
+              <source
+                srcset="./images/product/luna-nature-concept-sm.webp"
+                type="image/webp"
+              />
+              <img
+                src="./images/product/luna-nature-concept-sm.png"
+                alt="Luna Eye dome speaker in nature"
+                class="luna-eye__image"
+              />
+            </picture>
+          </div>
+
+          <p class="luna-eye__description">
+            Luna Eye is to the essence of this innovative light and audio
+            system. It comprises an independent tweeter speaker, a light guiding
+            component, a dome and a ring ornament.
+          </p>
+
+          <a href="#luna-eye" class="luna-eye__link">See more about us</a>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <div class="reviews__container">
+          <div class="reviews__card">
+            <div class="reviews__quote">
+              <p class="reviews__quote-text">
+                “It really took me by surprise honestly to have such full
+                beautiful sound that coming out of this small compact device.
+                And with the brush aluminum surface, it feels so familiar. Like
+                my iPhone.”
+              </p>
+            </div>
+
+            <div class="reviews__author">
+              <img
+                src="./images/product/avatar.png"
+                alt="Garrett Martin avatar"
+                class="reviews__avatar"
+              />
+              <div class="reviews__author-info">
+                <p class="reviews__author-name">Garrett Martin</p>
+                <p class="reviews__author-role">Creative Director</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

@@ -1,0 +1,84 @@
+@use './variables' as *;
+
+@mixin typography($size, $weight, $line-height, $uppercase: false) {
+  font-family: $font-inter;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+  
+  @if $uppercase {
+    text-transform: uppercase;
+  }
+}
+
+@mixin text-h1 {
+  @include typography(40px, 700, 52px, true);
+
+  @media (min-width: $breakpoint-tablet) {
+    @include typography(48px, 700, 62px, true);
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    @include typography(64px, 700, 78px, true);
+  }
+}
+
+@mixin text-h2 {
+  @include typography(40px, 700, 52px, true);
+
+  @media (min-width: $breakpoint-tablet) {
+    @include typography(36px, 700, 46px, true);
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    @include typography(56px, 700, 70px, true);
+  }
+}
+
+@mixin text-h3 {
+  @include typography(18px, 700, 22px, true);
+
+  @media (min-width: $breakpoint-tablet) {
+    @include typography(24px, 700, 30px, true);
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    @include typography(34px, 700, 42px, true);
+  }
+}
+
+@mixin text-h4 {
+  @include typography(22px, 700, 28px, true);
+}
+
+@mixin text-h5 {
+  @include typography(16px, 700, 22px);
+}
+
+@mixin text-h6 {
+  @include typography(14px, 700, 20px, true);
+}
+
+@mixin text-button { 
+  @include typography(12px, 700, 14px, true);
+}
+
+@mixin text-main { 
+    @include typography(16px, 400, 24px);
+}
+
+@mixin text-secondary { 
+    @include typography(14px, 400, 21px);
+}
+
+@mixin text-thirdary { 
+    @include typography(14px, 400, 21px, true);
+}
+
+@mixin text-quote {
+  @include typography(14px, 700, 20px);
+
+  @media (min-width: $breakpoint-desktop) {
+    @include typography(24px, 700, 36px);
+  }
+}

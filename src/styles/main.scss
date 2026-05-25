@@ -1,3 +1,15 @@
-body {
-  margin: 0;
-}
+@use './utils/variables';
+@use './utils/mixins';
+@use './utils/reset';
+@use './utils/base';
+@use './blocks/header';
+@use './blocks/icon';
+@use './blocks/menu';
+@use './blocks/promo';
+@use './blocks/benefits';
+@use './blocks/about';
+@use './blocks/luna-eye';
+@use './blocks/reviews';
+@use './blocks/features';
+@use './blocks/contact';
+@use './blocks/footer';

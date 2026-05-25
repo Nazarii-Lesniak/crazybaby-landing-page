@@ -1,0 +1,149 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins";
+@use "../utils/typography";
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  background-color: $clr-white;
+  overflow: auto;
+  z-index: 100;
+
+  opacity: 0;
+  transform: translateX(-100%);
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+
+  pointer-events: none;
+
+  align-content: flex-start;
+
+  @include mixins.container;
+  @include mixins.grid;
+
+  &:target {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &__header {
+    grid-column: 1 / -1;
+    height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-link {
+    min-width: 161px;
+    grid-column: 1 / span 2;
+  }
+
+  &__close-button {
+    grid-column: 4;
+    justify-self: end;
+
+    @include mixins.to-tablet {
+      grid-column: 8;
+    }
+  }
+
+  &__nav {
+    grid-column: 1 / -1;
+    margin-top: 29px;
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 25px;
+
+      @include mixins.to-tablet {
+        gap: 40px;
+      }
+    }
+
+    &-link {
+      font-family: $font-inter;
+      font-size: 14px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: $clr-text-main;
+      font-weight: 400;
+      text-decoration: none;
+
+      @include mixins.to-tablet {
+        @include typography.text-h4;
+      }
+
+      &:hover {
+        color: $clr-primary;
+      }
+
+      &--active {
+        font-weight: 700;
+        color: $clr-text-title;
+      }
+    }
+  }
+
+  &__bottom {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+  }
+
+  &__specs-link {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: $clr-text-muted;
+    text-decoration: none;
+
+    &:hover {
+      color: $clr-primary;
+    }
+  }
+
+  &__languages {
+    @include mixins.language-switcher;
+  }
+
+  &__buy-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute; 
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+
+    width: auto; 
+    height: 48px;
+
+    background-color: $clr-bg-button;
+    color: $clr-white;
+
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    @include mixins.to-tablet {
+      display: none;
+    }
+  }
+}
