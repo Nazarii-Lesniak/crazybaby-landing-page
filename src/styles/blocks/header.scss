@@ -6,6 +6,7 @@
   height: 76px;
 
   &__container {
+    display: flex;
     align-items: center;
     height: 100%;
 
@@ -13,7 +14,8 @@
     @include mixins.grid;
   }
 
-  &__link {
+  &__logo-link {
+    min-width: 161px;
     grid-column: 1 / span 2;
   }
 
@@ -38,45 +40,29 @@
     display: flex;
     align-items: center;
     gap: 30px;
-
-    &-item {
-      display: flex;
-      align-items: center;
-    }
-
-    &-link {
-      text-transform: uppercase;
-      color: $clr-text-muted;
-
-      font-weight: 300;
-
-      &:hover {
-        color: $clr-primary;
-      }
-    }
   }
 
-  &__language-switch {
-    color: $clr-gray-400;
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__specs-link {
+    font-family: "Helvetica Neue", sans-serif;
     font-weight: 300;
-
     font-size: 14px;
-    line-height: 18px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: $clr-text-muted;
+    text-decoration: none;
 
-
-    &[aria-current="page"] {
-      color: $clr-text-main;
-      font-weight: 400;
-    }
-
-    @include mixins.to-desktop {
-      line-height: 20px;
+    &:hover {
+      color: $clr-primary;
     }
   }
 
-  &__language-divider {
-    color: $clr-text-muted;
-    margin: 0 3px;
+  &__languages {
+    @include mixins.language-switcher;
   }
 
   &__buy-button {
