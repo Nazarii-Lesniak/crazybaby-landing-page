@@ -3,16 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crazybaby</title>
+    <title>Crazybaby – Futuristic Wireless Speaker Luna</title>
+    <meta
+      name="description"
+      content="Luna by Crazybaby – a futuristic wireless speaker with balanced sound, intuitive lighting system, and multi-room Wi-Fi support."
+    />
 
-    <link rel="preconnect" href="https://googleapis.com" />
-    <link 
-      rel="preconnect" 
-      href="https://gstatic.com" 
-      crossorigin="anonymous" 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
     />
     <link
-      href="https://googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -36,7 +40,7 @@
   <body>
     <header class="header">
       <div class="header__container">
-        <a href="#" class="header__link">
+        <a href="#" class="header__logo-link">
           <img
             src="./images/logo.svg"
             alt="Crazybaby logo"
@@ -47,51 +51,76 @@
         <div class="header__wrapper">
           <nav class="header__navigation">
             <ul class="header__list">
-              <li class="header__list-item">
-                <a href="#specs" class="header__list-link">Specs</a>
+              <li class="header__item">
+                <a href="#specs" class="header__specs-link"> Specs </a>
               </li>
-              <li class="header__list-item">
-                <a
-                  href="#en"
-                  class="header__language-switch"
-                  aria-current="page"
-                >
-                  EN
-                </a>
 
-                <span class="header__language-divider">/</span>
-                <a href="#ua" class="header__language-switch">UA</a>
+              <li class="header__item">
+                <div class="header__languages">
+                  <a href="#en" class="language-switch">EN </a>
+                  <span class="language-divider">/</span>
+                  <a href="#ua" class="language-switch">UA</a>
+                </div>
               </li>
             </ul>
           </nav>
-          <button
-            type="button"
-            class="header__buy-button"
-            aria-expanded="false"
-          >
-            Buy
-          </button>
+
+          <button type="button" class="header__buy-button">Buy</button>
         </div>
 
-        <button
-          type="button"
-          class="header__menu-button icon icon--menu"
-          aria-expanded="false"
-          aria-label="Toggle navigation menu"
-        ></button>
+        <a href="#menu" class="header__menu-button icon icon--menu"></a>
       </div>
     </header>
-    <aside></aside>
-    <main>
-      <section>Futuristic Design</section>
-      <section>Product Gallery</section>
-      <section>Designed for the Future</section>
-      <section>Luna Eye</section>
-      <section>Testimonial Section</section>
-      <section>Features</section>
-      <section>Contact Form?</section>
-      <section></section>
-    </main>
-    <footer></footer>
+
+    <aside class="menu" id="menu">
+      <div class="menu__header">
+        <a href="#" class="menu__logo-link">
+          <img
+            src="./images/logo.svg"
+            alt="Crazybaby logo"
+            class="menu__logo"
+          />
+        </a>
+
+        <a
+          href="#"
+          class="menu__close-button icon icon--close"
+          aria-label="Close navigation menu"
+        ></a>
+      </div>
+
+      <nav class="menu__nav" aria-label="Mobile menu links">
+        <ul class="menu__nav-list">
+          <li class="menu__nav-item">
+            <a class="menu__nav-link menu__nav-link--active" href="#our-story">
+              Our Story
+            </a>
+          </li>
+          <li class="menu__nav-item">
+            <a class="menu__nav-link" href="#about-us">About Us</a>
+          </li>
+          <li class="menu__nav-item">
+            <a class="menu__nav-link" href="#features">Features</a>
+          </li>
+          <li class="menu__nav-item">
+            <a class="menu__nav-link" href="#get-in-touch">Get in Touch</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="menu__bottom">
+        <a href="#specs" class="menu__specs-link">Specs</a>
+
+        <div class="menu__languages language-switcher">
+          <a href="#en" class="language-switch"> EN </a>
+          <span class="language-divider">/</span>
+          <a href="#ua" class="language-switch">UA</a>
+        </div>
+      </div>
+
+      <a href="#get-in-touch" class="menu__buy-button">Buy</a>
+    </aside>
+
+    
   </body>
 </html>
